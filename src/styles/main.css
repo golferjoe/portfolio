@@ -1,0 +1,103 @@
+:root {
+    --gray: rgb(230, 230, 230);
+    --grayer: rgb(190, 190, 190);
+}
+
+/* main divs */
+.main {
+    height: 100vh;
+
+    background-color: rgb(20, 20, 20);
+    color: #fff;
+    font-family: "mononoki", monospace;
+}
+
+.content {
+    width: min(80%, 600px);
+    margin: auto;
+    padding-top: 1rem;
+}
+
+/* page header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px dashed rgb(70, 70, 70);
+}
+
+.user {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.user_icon {
+    margin-top: 0.3rem;
+    font-size: 2rem;
+}
+
+.user_name {
+    font-family: "Dangrek";
+    margin: 0 0 0.8rem 0;
+}
+
+/* account list */
+.accounts {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    margin: 0 0 0.6rem 0;
+    padding: 0;
+}
+
+.account {
+    cursor: pointer;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    transition: color 150ms ease-out;
+}
+
+.account:hover {
+    color: var(--grayer);
+}
+
+.account_icon {
+    font-size: 1.2rem;
+    shape-rendering: crispEdges;
+    text-rendering: geometricPrecision;
+}
+
+.account_link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* section */
+.section_header {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 2.5rem 0 0.4rem 0;
+}
+
+.section_icon {
+    font-size: 1.4rem;
+}
+
+.section_title {
+    margin: 0.2rem 0 0 0;
+}
+
+.section_text {
+    margin: 0;
+    color: var(--gray);
+}
+
+/* projects */
+.projects {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
