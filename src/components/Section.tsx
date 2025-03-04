@@ -11,7 +11,7 @@ export function Section({ title, icon, children }: SectionProps) {
         <>
             <div className="section_header">
                 <i className={`section_icon hn ${icon}`} />
-                <h3 class="section_title">{title}</h3>
+                <h2 class="section_title">{title}</h2>
             </div>
             {children}
         </>

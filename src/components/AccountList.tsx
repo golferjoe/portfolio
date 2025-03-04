@@ -1,15 +1,23 @@
-import { AccountBase } from "../types";
-import { Account } from "./Account";
+import { Account } from "../types";
 
 interface AccountListProps {
-    accounts: AccountBase[];
+    accounts: Account[];
 }
 
 export function AccountList({ accounts }: AccountListProps) {
     return (
         <ul className="accounts">
             {accounts.map((account, index) => (
-                <Account key={index} {...account} />
+                <li key={index} className="account">
+                    <i className={`hn ${account.icon} account_icon`} />
+                    <a
+                        className="account_link"
+                        href={account.link}
+                        target="_blank"
+                    >
+                        {account.name}
+                    </a>
+                </li>
             ))}
         </ul>
     );

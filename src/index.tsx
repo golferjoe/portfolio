@@ -1,50 +1,23 @@
 import { render } from "preact";
 import "normalize.css";
 import "@hackernoon/pixel-icon-library/fonts/iconfont.css";
+import "devicon";
 
 import "./styles/fonts.css";
 import "./styles/main.css";
-import { AccountList } from "./components/AccountList";
-import { AccountBase, ProjectBase } from "./types";
 import { Section } from "./components/Section";
 import { ProjectList } from "./components/ProjectList";
+import { TechStack } from "./components/TechStack";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
-const Accounts: AccountBase[] = [
-    {
-        name: "GitHub",
-        icon: "hn-github",
-        link: "",
-    },
-    {
-        name: "PicoCTF",
-        icon: "hn-flag-solid",
-        link: "",
-    },
-    {
-        name: "Twitter",
-        icon: "hn-x",
-        link: "",
-    },
-];
-
-const Projects: ProjectBase[] = [
-    {
-        name: "xyz",
-        description: "Lorem ipsum dolor sit amet",
-    },
-];
+// TODO: Create link (anchor) component
 
 export function App() {
     return (
         <div className="main">
             <div className="content">
-                <div className="header">
-                    <div className="user">
-                        <i className="user_icon hn hn-cybersecurity" />
-                        <h1 className="user_name">golferjoe</h1>
-                    </div>
-                    <AccountList accounts={Accounts} />
-                </div>
+                <Header />
                 <Section title="About Me" icon="hn-user-solid">
                     <p className="section_text">
                         I'm interested in reverse engineering games and
@@ -57,12 +30,13 @@ export function App() {
                         python.
                     </p>
                 </Section>
-                <Section title="Tech Stack" icon="hn-code">
-                    <p style={{ margin: 0 }}>to do</p>
+                <Section title="Tech Stack" icon="hn-code-solid">
+                    <TechStack />
                 </Section>
                 <Section title="Projects" icon="hn-trophy-solid">
-                    <ProjectList projects={Projects} />
+                    <ProjectList />
                 </Section>
+                <Footer />
             </div>
         </div>
     );
