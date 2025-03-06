@@ -1,0 +1,12 @@
+This is a repository containing source code for my (golferjoe) personal website.
+It's made using PreactJS, TypeScript and Vanilla CSS.
+
+To build the website, clone the repository, cd into the project directory, and run:
+$ npm install
+$ npm run build
+
+or for development:
+$ npm install
+$ npm run dev
+
+Project is distributed under MIT license.
