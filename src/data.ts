@@ -62,4 +62,11 @@ export const Projects: Project[] = [
         repository: "https://github.com/resolutesystems",
         techStack: ["Rust", "PreactJS", "Cryptography", "CDN", "i18n"],
     },
+    {
+        name: "Memory Graph",
+        description: `An online tool that allows users to create interactive graphs, with nodes representing memory, pointers, and addresses.
+        Built using PreactJS and TypeScript, the service provides an intuitive way to visualize and manage complex memory structures.`,
+        repository: "https://github.com/golferjoe/memory-graph",
+        techStack: ["PreactJS", "TypeScript"],
+    },
 ];

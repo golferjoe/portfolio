@@ -146,6 +146,10 @@ header {
     border-radius: 0.5rem;
 }
 
+.project:not(:last-child) {
+    margin-bottom: 0.4rem;
+}
+
 .project_header {
     display: flex;
     align-items: center;
@@ -161,10 +165,11 @@ header {
     display: flex;
     color: var(--grayer);
     text-decoration: none;
+    border-bottom: 1px solid transparent; /* nasty fix */
 }
 
 .project_repo:hover {
-    border-bottom: 1px solid var(--bg-light);
+    border-color: var(--bg-light);
 }
 
 .project_repo_icon {
